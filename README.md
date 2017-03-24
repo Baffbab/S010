@@ -9,7 +9,12 @@ Use this to install the edtior/debuger for this project.
 	sudo scripts/install-sdk.sh
 
  
-After install, you can run this to edit he Client.
+After install, you can run this to edit the project.
 
-	node c9sdk/server.js -p 8080 -a : -w "./Client"
+	./Editor-Cloud9
 
+
+
+Now use Electron to execute the code.
+
+	electron ./Client
