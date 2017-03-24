@@ -9,6 +9,7 @@ Use this to install the edtior/debuger for this project.
 	sudo scripts/install-sdk.sh
 
  
+After install, you can run this to edit he Client.
 
-node server.js -p 8080 -a : -w "./S010"
+	node c9sdk/server.js -p 8080 -a : -w "./Client"
 
