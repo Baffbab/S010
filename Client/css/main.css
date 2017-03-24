@@ -1,0 +1,226 @@
+ /*
+ICONS for toolbar...
+*/
+ 
+ .TabManagerDisplayBody {
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(90deg, #E0E0E0, #FFFFFF);
+ }
+ /*
+ 
+*/
+ 
+ .x-splitter-vertical {
+  /*background-color: #a9a9a9;*/
+  /*background-color: #f2f2f2;*/
+  background-image: linear-gradient(90deg, #E0E0E0, #FFFFFF);
+  background: -webkit-radial-gradient(center, ellipse cover, #F5F5F5 0%, #E0E0E0 100%);
+  border-top-width: 1px;
+  border-top-color: #F5F5F5;
+  border-top-style: solid;
+  border-right-width: 1px;
+  border-right-color: #F5F5F5;
+  border-right-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: #F5F5F5;
+  border-bottom-style: solid;
+  border-left-width: 1px;
+  border-left-color: #F5F5F5;
+  border-left-style: solid;
+ }
+ 
+ .x-splitter-horizontal {
+  /*background-color: #a9a9a9;*/
+  background-image: linear-gradient(180deg, #E0E0E0, #FFFFFF);
+  background: -webkit-radial-gradient(center, ellipse cover, #F5F5F5 0%, #E0E0E0 100%);
+  background-color: #f2f2f2;
+  border-top-width: 1px;
+  border-top-color: #F5F5F5;
+  border-top-style: solid;
+  border-right-width: 1px;
+  border-right-color: #F5F5F5;
+  border-right-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: #F5F5F5;
+  border-bottom-style: solid;
+  border-left-width: 1px;
+  border-left-color: #F5F5F5;
+  border-left-style: solid;
+ }
+ 
+ .x-form-field {
+  border: 0 !important;
+ }
+ 
+ .x-form-required-field {
+  border: 0 !important;
+ }
+ 
+ .x-form-text {
+  border: 0 !important;
+ }
+ 
+ .x-form-text-default {
+  border: 0 !important;
+ }
+ 
+ .PanelBlackBack .x-panel-body {
+  background-color: black;
+ }
+ 
+ .PanelDarkBack .x-panel-body {
+  /*background-image: linear-gradient(0deg, #E0E0E0, #666666); */
+  background: -webkit-radial-gradient(center, ellipse cover, #666666 25%, #333333 100%);
+ }
+ 
+ .PanelSmoothGrayBack .x-panel-body {
+  background-image: linear-gradient(0deg, #E0E0E0, #FFFFFF);
+  /*background-color: #E0E0E0 !important;*/
+  /*background-color: black !important;*/
+ }
+ 
+ .PanelBkGrndGradientToRight .x-panel-body {
+  background-image: linear-gradient(95deg, #E0E0E0, #FFFFFF);
+ }
+ 
+ .PanelBkGrndGradientFLATBack .x-panel-body {
+  /*
+  #C0C0C0 -- Silver   - STANDARD
+  #F5F5F5 -- whitesmoke..
+  E0E0E0 -- suttle change -- Nice one...
+  B6B6B6 -- 1 step darker thatn silver...
+  #F9F9F9 -- 2 steps darker than silver...
+  D9D9D9 -- Darker Silver
+  E6E6E6 -- mid silver
+  #F9F9F9 - lighter silver
+  #FCFCFC - lightest of light... GOOD MIX...
+
+    */
+  background: -webkit-radial-gradient(center, ellipse cover, #F5F5F5 0%, #E0E0E0 100%);
+  /* Chrome10+,Safari5.1+ */
+ }
+ 
+ .PanelBkGrndEllipseSilver .x-panel-body {
+  background: -webkit-radial-gradient(center, ellipse cover, #F5F5F5 0%, #E0E0E0 100%);
+  /* Chrome10+,Safari5.1+ */
+  /*BBborder: 1px solid #868686;*/
+ }
+ 
+ .PanelBkGrndEllipseToWhite .x-panel-body {
+  /*background: -webkit-radial-gradient(center, ellipse cover, #ffffff 85%, #E0E0E0 100%);*/
+  background: -webkit-radial-gradient(center, ellipse cover, #ffffff 85%, #e6e6e6 100%);
+  /*background: radial-gradient(ellipse at center, #ffffff , #E0E0E0);*/
+  /*background: radial-gradient(ellipse at center,#ffffff 65%, #e6e6e6 100%);*/
+  padding: 25px;
+  /* Chrome10+,Safari5.1+ */
+  /*BBborder: 1px solid #868686;*/
+ }
+ /*
+
+
+panels
+
+
+
+*/
+ 
+ .panel-default {
+  /*background-image: linear-gradient(180deg, #FCFCFC, #C4C4C4);*/
+  background: -webkit-radial-gradient(center, ellipse cover, #F5F5F5 0%, #E0E0E0 100%);
+  /*background-color: blue;*/
+  /*background-color:rgba(0, 0, 0, 0.1);*/
+  border-top-right-radius: .7em;
+  border-bottom-right-radius: .7em;
+  border-bottom-left-radius: .7em;
+  border-top-left-radius: .7em;
+  font-family: 'Roboto', sans-serif;
+ }
+ 
+ .panel-body {
+  /*position: relative;*/
+  /*background-color:#f2f2f2;*/
+  /*background-color:#bfbfbf;*/
+  color: black;
+  /*width:80%;*/
+  /*padding-top: 15px;*/
+  margin-top: 15px;
+  font-size: 15px;
+ }
+ 
+ .panel-header {
+  /*background-color:blue;*/
+  position: relative;
+  vertical-align: middle;
+  height: 25px;
+  background-color: transparent;
+ }
+ 
+ .panel-body-title {
+  /*font-family: 'Roboto', sans-serif;*/
+  /*font-family: 'PT Sans', sans-serif;*/
+  font-family: 'Lato', sans-serif;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  /*width:80%;*/
+  padding-left: 10px;
+  /*position: relative;*/
+  font-size: 23px;
+  font-weight: bold;
+  font-variant: small-caps;
+  white-space: nowrap;
+  letter-spacing: .09em;
+  /*color:#ffffff;*/
+  color: #a6a6a6;
+  /*color:#666666;*/
+  background-color: transparent;
+  /*text-shadow: 1px 1px 1px #333333;*/
+  /*text-shadow: 1px 1px 1px #ffffff;*/
+  text-shadow: 1px 1px 1px #000000;
+ }
+ /*do that button*/
+ 
+ .panel-header-menu {
+  background-color: transparent;
+  position: absolute;
+  right: 10px;
+  top: 0;
+  /*width:160px;*/
+  /*text-align:center;*/
+  /*background-color:green;*/
+ }
+ 
+ .panel-body-menu-button {
+  color: black;
+  font-size: 18px;
+  text-shadow: 1px 1px 1px gray;
+ }
+ 
+ .panel-body-menu-button:hover {
+  color: gray;
+  text-shadow: 1px 1px 1px white;
+ }
+ /*
+ THis is the statusbar text!
+ .ToolbarText {
+  font-family: 'Fruktur', cursive;
+  font-size: 18px;
+  color: blue;
+ }
+ */
+ 
+ .StatusbarText {
+  font-family: 'Slackey', cursive;
+  font-size: 18px;
+  color: purple;
+ }
+ 
+ .LazyText {
+  font-family: 'Abel', sans-serif;
+  /*font-family: 'Slackey', cursive;*/
+  font-size: 18px;
+  /*color: #4C4C4C;*/
+  color: #1a1a1a;
+  cursor: default;
+ }
+ 

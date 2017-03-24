@@ -1,6 +1,6 @@
 echo "Commiting to git..."
  
-#git add proxy
+git add Client
  
 
 git commit -a -m 'Server commit by bash script...'

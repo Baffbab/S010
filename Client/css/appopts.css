@@ -1,0 +1,36 @@
+/*
+App Options View
+
+
+*/
+
+.AppOptsHead {
+    padding-left: 4px;
+    color: #0000b3;
+    /*color: #808080;*/
+    /*color: #ffffff;*/
+    text-shadow: 1px 1px 1px #ffffff;
+    /*text-shadow: 1px 1px 1px #000033; */
+    /*text-shadow: 1px 1px 1px #e6e6ff; */
+    font-size: 15px;
+    /*font-weight: bold;*/
+    font-variant: small-caps;
+    letter-spacing: .03em;
+}
+
+.NaviHead {
+    padding-left: 4px;
+    color: #000000;
+    /*color: #808080;*/
+    /*color: #ffffff;*/
+    /*text-shadow: 1px 1px 1px #808080; */
+    text-shadow: 1px 1px 1px #ffffff;
+    font-size: 14px; 
+    font-variant: small-caps;
+    letter-spacing: .03em;
+}
+.NaviHead:hover{
+    color: #000099;
+    /*text-shadow: 1px 1px 1px #000000;*/
+ 
+}

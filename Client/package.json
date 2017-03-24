@@ -1,0 +1,30 @@
+{
+  "name": "S010",
+  "version": "1.0.1",
+  "description": "Desktop client for S010",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/electron/electron-quick-start.git"
+  },
+  "keywords": [
+    "S010"
+  ],
+  "author": "me@johnrnelson.com",
+  "license": "CC0-1.0",
+  "bugs": {
+    "url": "https://github.com/electron/electron-quick-start/issues"
+  },
+  "homepage": "https://github.com/electron/electron-quick-start#readme",
+  "dependencies": {
+    "archiver": "^1.1.0",
+    "request": "^2.48.0",
+    "ws": "^1.1.1"
+  },
+  "devDependencies": {
+    "electron-prebuilt": "^1.1.0"
+  }
+}
