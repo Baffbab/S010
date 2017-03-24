@@ -10,5 +10,5 @@ Use this to install the edtior/debuger for this project.
 
  
 
-node server.js -p 8080 -a : -w "/media/bugz/WORK/PROJECTZ/S010"
+node server.js -p 8080 -a : -w "./S010"
 
