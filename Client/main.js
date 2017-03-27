@@ -32,34 +32,34 @@ function createWindow() {
 
 
 
-    fs.readFile(__dirname + '/config.json', 'utf8', function(err, data) {
-        debugger;
-        if (err) {
-            console.error(err);
-        }
-        else {
-            try {
-                var CONFIGDATA = JSON.parse(data);
-                if (CONFIGDATA.debug == 1) {
+    // fs.readFile(__dirname + '/config.json', 'utf8', function(err, data) {
+    //     debugger;
+    //     if (err) {
+    //         console.error(err);
+    //     }
+    //     else {
+    //         try {
+    //             var CONFIGDATA = JSON.parse(data);
+    //             if (CONFIGDATA.debug == 1) {
 
 
-                    // console.log(data);
-                    mainWindow.webContents.openDevTools();
-                }
-            }
-            catch (errJSONCONFIG) {
-                console.log('Error Reading JSON for config.json!!!');
-                console.log(errJSONCONFIG);
+    //                 // console.log(data);
+    //                 mainWindow.webContents.openDevTools();
+    //             }
+    //         }
+    //         catch (errJSONCONFIG) {
+    //             console.log('Error Reading JSON for config.json!!!');
+    //             console.log(errJSONCONFIG);
 
-            }
-        }
+    //         }
+    //     }
 
-    });
-
-
+    // });
 
 
-    // // // Open the DevTools.
+
+
+    //  Open the DevTools.
     // mainWindow.webContents.openDevTools();
 
     //No menus...
@@ -81,13 +81,10 @@ function createWindow() {
 
 }
 
-// ipcMain.on('sndmsg', (_, msg) => {
-//   console.log(msg);
 
-//     // // Open the DevTools.
-//     mainWindow.webContents.openDevTools();
-// })
-
+ipcMain.on('OpenDevTools', function(event, arg) {
+    mainWindow.webContents.openDevTools(); 
+});
 
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.

@@ -1,6 +1,6 @@
 var fs = require("fs");
 
- 
+
 
 Ext.define('S010.UI.DisplayPort', {
     extend: 'Ext.container.Viewport',
@@ -10,8 +10,10 @@ Ext.define('S010.UI.DisplayPort', {
         'Ext.ux.TabReorderer',
         'S010.UI.Taby',
         'S010.UI.Windows',
+        // 'Ext.menu.Menu'
 
     ],
+    //   uses: ['Ext.picker.Date', 'Ext.menu.Menu']
     // stateful: true,
     // stateId: 'DisplayPort',
 
@@ -23,10 +25,55 @@ Ext.define('S010.UI.DisplayPort', {
 
     items: [
         ///////
-
-
-
         {
+            region: 'north',
+
+            tbar: [
+
+                {
+                    text: 'File',
+                    menu: [
+
+                        {
+                            text: 'Open Console',
+                            iconCls: 'fa fa-map-o',
+                            handler: function() {
+                                S010.OpenDevTools();
+                            }
+                        }, '-', {
+                            text: 'Exit',
+                            handler: function() {
+                                S010.Exit();
+                            }
+                        }
+                    ]
+                }, {
+                    text: 'Edit',
+                    menu: [
+
+                        {
+                            text: 'TEST',
+                            disabled: true,
+                            handler: function() {
+                                console.info('test')
+                            }
+                        }
+                    ]
+                },
+                '->', {
+                    text: 'Help',
+                    menu: [{
+                            text: 'About..',
+                            disabled: true,
+                            handler: function() {
+                                console.info('test')
+                            }
+                        }
+
+                    ]
+                }
+            ],
+        }, {
             region: 'center',
             xtype: 'Taby',
             id: 'TabManager',
@@ -51,11 +98,14 @@ Ext.define('S010.UI.DisplayPort', {
                     bodyPadding: 15,
                     overflowY: 'auto',
                     closable: true,
+
+
+
                     listeners: {
                         render: function(view, other, andsome) {
                             // fs = require('fs')
                             // var fs = require('fs');
-                          
+
 
                             fs.readFile(S010.RootPath + '/HTML/welcome.html', 'utf8', function(err, data) {
 
@@ -67,11 +117,11 @@ Ext.define('S010.UI.DisplayPort', {
 
                                 }
                             });
- 
+
                         }
                     },
 
-                }, 
+                },
 
             ]
         }
@@ -114,7 +164,7 @@ Ext.define('S010.UI.DisplayPort', {
 
         }
     },
-    initComponent: function() { 
-        this.callParent(); 
+    initComponent: function() {
+        this.callParent();
     },
 });

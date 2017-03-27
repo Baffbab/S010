@@ -16,15 +16,21 @@ var S010;
     var electron = require('electron');
 
 
+    const ipc = electron.ipcRenderer;
 
 
 
     window.S010 = {
+        Exit() {
+            window.close();
+        },
         ExternalURL: function(URL2Open) {
             electron.shell.openExternal(URL2Open);
 
         },
-
+        OpenDevTools: function() {
+            ipc.send("OpenDevTools");
+        },
         AlertNA: function() {
             S010.UI.WindowManager.Dialogs.Alert({
                 buttons: ['OK'],
@@ -110,58 +116,14 @@ var S010;
         });
     */
 
-
+    AddScriptFile('./UI/UI.js');
     // xxxxxxxxxxxxxxxxxxxxxxxxxx
     (function() {
-        var S010SERVER = {
-                "version": {
-                    "major": 1,
-                    "minor": 1,
-                    "revision": 72,
-                    "build": "2016-11-02T16:51:56.830Z"
-                },
-                "ClientIP": "Unknown"
-            }
-            /*
-                 The master version of this client. It is changed when a new build 
-                 is produced...
-                 jrn.com UPDATE.js handles this on the back end...
-             */
-        // debugger;
- 
-
-        // debugger;
-        var localVersion = JSON.parse(fs.readFileSync(__dirname + '/S010.json', 'utf8'));
-        S010.version = localVersion.version;
+        return;
+        
 
 
 
-        // (function() {
-
-
-
-
-        //     if ((S010.ServerInfo.version.major != S010.version.major) ||
-        //         (S010.ServerInfo.version.minor != S010.version.minor) ||
-        //         (S010.ServerInfo.version.revision != S010.version.revision)) {
-
-        //         S010.version.isValid = false;
-        //     }
-        //     else {
-        //         S010.version.isValid = true;
-        //     }
-
-
-        // })(); //
-
-
-        // AddScriptFile('./App/HeartBeat.js'); 
-
-        AddScriptFile('./UI/UI.js');
-        // AddScriptFile('./App/Storage/HomeFolder.js');
-
-
- 
     })();
     // xxxxxxxxxxxxxxxxxxxxxxxxxx
 
