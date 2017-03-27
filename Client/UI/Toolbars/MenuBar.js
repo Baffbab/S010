@@ -1,5 +1,7 @@
 /*
-    Main Statusbar...
+    Main Toolbar...
+    
+    not used anymore????
 
 */
 (function() {
@@ -44,17 +46,10 @@
                         S010.ExternalURL('http://google.com');
                     }
                 }, '-', {
-                    text: 'Delete User Space',
-                    tooltip: 'Delete home folder files from this app',
-                    // icon: S010.IconPath + 'beta_general_open_16.png',
-
-                    handler: function(btn) {
-                        // console.info('FILE OPEN');
-
-                        S010.HomeFolder.Destroy(null, function() {
-
-                        });
-
+                    text: 'Open Console',
+                    iconCls: 'fa fa-map-o',
+                    handler: function() {
+                        S010.OpenDevTools();
                     }
                 }, '-', {
                     iconCls: 'fa fa-sign-out',
@@ -65,7 +60,7 @@
 
                 }, ]
             });
- 
+
 
             thisPanel.items = MenuItems
 

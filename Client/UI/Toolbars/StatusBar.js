@@ -178,89 +178,93 @@
 
                     // //
                     {
-                        text: 'User Options...',
-                        // tooltip: 'Open a local file from your computer',
-                        // icon: S010.IconPath + 'beta_general_open_16.png',
-
+                        text: 'Developer Tools',
+                        tooltip: 'Open the Chrome Developer Tools',
                         handler: function(btn) {
-                            // console.info('FILE OPEN');
-                            
-                            // UserPrefs
-                            
-                            window.S010.AlertNA();
-                            // S010.ExternalURL('http://google.com');
+                            S010.OpenDevTools();
+                        }
+                    }, //
+                    {
+                        text: 'Tell the future',
+                        handler: function(btn) {
+                            S010.AlertNA();
                         }
                     },
-
-                    // {
-                    //     tooltip: 'HELP',
-                    //     text: 'Help',
-                    //     icon: S010.IconPath + 'sigma_general_help_16.png',
-                    //     // text: '<span class="ToolbarText">FILE</span>',
-
-                    //     menu: [ //
-
-                    //     ]
-                    // },
-
-                    '-',
 
                     {
-                        text: 'About...',
-                        tooltip: 'Who/What/Where/Why...',
-                        icon: S010.IconPath + 'modern_general_help_16.png',
-                        handler: function(btn) {
-                            console.info('about');
-                            //HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHhh
 
+                        text: 'Help',
+                        menu: [ //
+                            {
+                                text: 'TEKTOLOGY LLC',
+                                tooltip: 'Tektology Home Web Site!',
+                                handler: function(btn) {
+                                    
+                                    S010.ExternalURL('https://www.tektology.com');
+                                }
+                            },
+                            '-',
 
-
-                            var aboutWin = S010.UI.WindowManager.Window.New({
-
-                                id: 'AboutWIn',
-
-
-                                //  // title: 'Edit Marker' + defaultData.title,
+                            {
+                                text: 'About...',
+                                tooltip: 'Who/What/Where/Why...',
                                 icon: S010.IconPath + 'modern_general_help_16.png',
-                                //  iconCls: 'fa television',
-                                bodyStyle: 'background:transparent;',
-                                border: 0,
-                                resizable: false,
-                                draggable: false,
-                                modal: true,
-                                width: 200,
-                                height: 300,
-                                layout: 'fit',
-                                title: '<center><i>John R Nelson</i></center>',
+                                handler: function(btn) {
+                                    console.info('about');
+                                    //HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHhh
 
 
-                            });
 
-                            var fs = require("fs");
+                                    var aboutWin = S010.UI.WindowManager.Window.New({
+
+                                        id: 'AboutWIn',
 
 
-                            fs.readFile(S010.RootPath + '/HTML/about.html', 'utf8', function(err, data) {
-                                // debugger;
-                                if (err) {
-                                    console.error(err);
+                                        //  // title: 'Edit Marker' + defaultData.title,
+                                        icon: S010.IconPath + 'modern_general_help_16.png',
+                                        //  iconCls: 'fa television',
+                                        bodyStyle: 'background:transparent;',
+                                        border: 0,
+                                        resizable: false,
+                                        draggable: false,
+                                        modal: true,
+                                        width: 200,
+                                        height: 300,
+                                        layout: 'fit',
+                                        title: '<center><i>John R Nelson</i></center>',
+
+
+                                    });
+
+                                    var fs = require("fs");
+
+
+                                    fs.readFile(S010.RootPath + '/HTML/about.html', 'utf8', function(err, data) {
+                                        // debugger;
+                                        if (err) {
+                                            console.error(err);
+                                        }
+                                        else {
+
+                                            // console.log(data);
+                                            aboutWin.update(data);
+                                        }
+                                        aboutWin.show();
+                                    });
+
+
+
+
+
+
+
+                                    //HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHhh
                                 }
-                                else {
+                            },
 
-                                    // console.log(data);
-                                    aboutWin.update(data);
-                                }
-                                aboutWin.show();
-                            });
-
-
-
-
-
-
-
-                            //HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHhh
-                        }
+                        ]
                     },
+
 
 
                     '-', {
