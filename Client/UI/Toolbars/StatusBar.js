@@ -194,15 +194,8 @@
                     {
 
                         text: 'Help',
-                        menu: [{
-                                text: 'TEKTOLOGY LLC',
-                                tooltip: 'Tektology Home Web Site!',
-                                handler: function(btn) {
+                        menu: [
 
-                                    S010.ExternalURL('https://www.tektology.com');
-                                }
-                            },
-                            '-',
 
                             {
                                 text: 'About...',
@@ -252,14 +245,34 @@
                                     });
 
 
-
-
-
-
-
                                     //HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHhh
                                 }
                             },
+                            '-',
+
+                            {
+                                text: 'TEKTOLOGY LLC',
+                                menu: [{
+                                    text: 'TEKTOLOGY LLC',
+                                    tooltip: 'Tektology Home Web Site',
+                                    handler: function(btn) {
+
+                                        S010.ExternalURL('https://www.tektology.com');
+                                    }
+                                }, {
+                                    text: 'S010 GitHub Project',
+                                    tooltip: 'The source code to this project',
+                                    handler: function(btn) {
+
+                                        S010.ExternalURL('https://github.com/TEKTOLOGY-COM/S010');
+                                    }
+                                }, ]
+
+                            },
+
+
+
+
 
                         ]
                     },
