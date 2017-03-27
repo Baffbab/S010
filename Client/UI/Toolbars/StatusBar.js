@@ -194,12 +194,11 @@
                     {
 
                         text: 'Help',
-                        menu: [ //
-                            {
+                        menu: [{
                                 text: 'TEKTOLOGY LLC',
                                 tooltip: 'Tektology Home Web Site!',
                                 handler: function(btn) {
-                                    
+
                                     S010.ExternalURL('https://www.tektology.com');
                                 }
                             },

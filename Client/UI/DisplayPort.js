@@ -24,78 +24,7 @@ Ext.define('S010.UI.DisplayPort', {
     },
 
     border: 0,
-
-
-
-
-
-
-
-
-
-
-
-
-    xxxxxxxxxxxxxxxxxx: {
-        xregion: 'north',
-        xxtype: 'MenuBar',
-        xxxxtbar: [{
-                text: 'File',
-                menu: [
-
-                    {
-                        text: 'Open Console',
-                        iconCls: 'fa fa-map-o',
-                        handler: function() {
-                            S010.OpenDevTools();
-                        }
-                    }, '-', {
-                        text: 'Exit',
-                        handler: function() {
-                            S010.Exit();
-                        }
-                    }
-                ]
-            }, {
-                text: 'Edit',
-                menu: [
-
-                    {
-                        text: 'TEST',
-                        handler: function() {
-                            S010.AlertNA();
-                        }
-                    }
-                ]
-            },
-            '->', {
-                text: 'Help',
-                menu: [{
-                        text: 'About..',
-                        // disabled: true,
-                        handler: function() {
-                            S010.AlertNA();
-                        }
-                    }
-
-                ]
-            }
-        ],
-    },
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ 
 
     items: [
         //
