@@ -1,7 +1,7 @@
 # S010
 Full client (Electron, ExtJS, ThreeJS, and a few others) for the three desktop/laptop platforms - Linux, Mac, and Windows.
 
-#Cloud9 Edtior
+# Cloud9 Edtior
 Use this to install the edtior/debuger for this project.
 
 	git clone https://github.com/c9/core.git c9sdk
@@ -20,5 +20,5 @@ Now use Electron to execute the code.
 	electron ./Client 
 	
 
-#Warning
+# Warning
 We are still working on this...
