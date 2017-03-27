@@ -32,6 +32,7 @@ var S010;
             ipc.send("OpenDevTools");
         },
         AlertNA: function() {
+            
             S010.UI.WindowManager.Dialogs.Alert({
                 buttons: ['OK'],
                 title: 'Not Available',

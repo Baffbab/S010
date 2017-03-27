@@ -24,108 +24,104 @@ Ext.define('S010.UI.DisplayPort', {
     border: 0,
 
     items: [
-        ///////
+        //
         {
-            region: 'north',
+        region: 'north',
+        tbar: [
+            {
+                text: 'File',
+                menu: [
 
-            tbar: [
-
-                {
-                    text: 'File',
-                    menu: [
-
-                        {
-                            text: 'Open Console',
-                            iconCls: 'fa fa-map-o',
-                            handler: function() {
-                                S010.OpenDevTools();
-                            }
-                        }, '-', {
-                            text: 'Exit',
-                            handler: function() {
-                                S010.Exit();
-                            }
+                    {
+                        text: 'Open Console',
+                        iconCls: 'fa fa-map-o',
+                        handler: function() {
+                            S010.OpenDevTools();
                         }
-                    ]
-                }, {
-                    text: 'Edit',
-                    menu: [
+                    }, '-', {
+                        text: 'Exit',
+                        handler: function() {
+                            S010.Exit();
+                        }
+                    }
+                ]
+            }, {
+                text: 'Edit',
+                menu: [
 
-                        {
-                            text: 'TEST',
-                            disabled: true,
-                            handler: function() {
-                                console.info('test')
+                    {
+                        text: 'TEST',
+                        handler: function() {
+                            S010.AlertNA();
+                        }
+                    }
+                ]
+            },
+            '->', {
+                text: 'Help',
+                menu: [{
+                        text: 'About..',
+                        // disabled: true,
+                        handler: function() {
+                            S010.AlertNA();
+                        }
+                    }
+
+                ]
+            }
+        ],
+    }, {
+        region: 'center',
+        xtype: 'Taby',
+        id: 'TabManager',
+        flex: 4,
+        border: 0,
+        autoDestroy: false,
+        plain:true,
+
+        items: [
+            //
+            {
+                title: 'News and Updates',
+                // icon: S010.IconPath + 'modern_general_help_16.png',
+                icon: S010.IconPath + 'stroke_communications_news_16.png',
+
+
+                // cls: 'PanelBlackBack',
+                // cls: 'PanelSmoothGrayBack',
+                // cls: 'PanelBkGrndGradientFLATBack',
+                // cls: 'PanelBkGrndEllipseToWhite', 
+                cls: 'PanelDarkBack',
+                bodyPadding: 15,
+                overflowY: 'auto',
+                closable: true,
+
+
+
+                listeners: {
+                    render: function(view, other, andsome) {
+                        // fs = require('fs')
+                        // var fs = require('fs');
+
+
+                        fs.readFile(S010.RootPath + '/HTML/welcome.html', 'utf8', function(err, data) {
+
+                            if (err) {
+                                debugger;
                             }
-                        }
-                    ]
-                },
-                '->', {
-                    text: 'Help',
-                    menu: [{
-                            text: 'About..',
-                            disabled: true,
-                            handler: function() {
-                                console.info('test')
+                            else {
+                                view.update(data);
+
                             }
-                        }
+                        });
 
-                    ]
-                }
-            ],
-        }, {
-            region: 'center',
-            xtype: 'Taby',
-            id: 'TabManager',
-            flex: 4,
-            border: 0,
-            autoDestroy: false,
-            // plain:true,
-
-            items: [
-                //
-                {
-                    title: 'News and Updates',
-                    // icon: S010.IconPath + 'modern_general_help_16.png',
-                    icon: S010.IconPath + 'stroke_communications_news_16.png',
-
-
-                    // cls: 'PanelBlackBack',
-                    // cls: 'PanelSmoothGrayBack',
-                    // cls: 'PanelBkGrndGradientFLATBack',
-                    // cls: 'PanelBkGrndEllipseToWhite', 
-                    cls: 'PanelDarkBack',
-                    bodyPadding: 15,
-                    overflowY: 'auto',
-                    closable: true,
-
-
-
-                    listeners: {
-                        render: function(view, other, andsome) {
-                            // fs = require('fs')
-                            // var fs = require('fs');
-
-
-                            fs.readFile(S010.RootPath + '/HTML/welcome.html', 'utf8', function(err, data) {
-
-                                if (err) {
-                                    debugger;
-                                }
-                                else {
-                                    view.update(data);
-
-                                }
-                            });
-
-                        }
-                    },
-
+                    }
                 },
 
-            ]
-        }
-    ],
+            },
+
+        ]
+    }],
     listeners: {
         render: function(view, other, andsome) {
             /*
@@ -157,10 +153,7 @@ Ext.define('S010.UI.DisplayPort', {
                         }
             */
 
-            // S010.HomeFolder.Open(function(OpenWithError) {
-            //     console.log('OpenWithError', OpenWithError);
-            // });
-
+       
 
         }
     },
